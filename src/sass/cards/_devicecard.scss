@@ -1,0 +1,39 @@
+.device-card {
+  position: relative;
+  width: 100%;
+  background: $white;
+  border-radius: $border-radius;
+  min-height: 300px;
+  margin-bottom: 30px;
+  @include an-box-shadow-small;
+
+  .chart {
+    height: 200px;
+  }
+
+  &.gradient {
+    @extend .background-gradient;
+
+    .content {
+      h4, p {
+        color: $white;
+      }
+    }
+  }
+
+  .content {
+    padding: $padding-medium;
+    padding-bottom: 0;
+    h4 {
+      margin-bottom: 0;
+      font-weight: $font-weight-medium;
+      font-size: 30px;
+      padding-bottom: $padding-5;
+    }
+    p {
+      margin: 0;
+      color: $font-color-light;
+    }
+
+  }
+}

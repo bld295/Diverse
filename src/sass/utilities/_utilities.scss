@@ -1,0 +1,49 @@
+.pt20 {
+  padding-top: $padding-base + 5;
+}
+.pb20 {
+  padding-bottom: $padding-base + 5;
+}
+
+.product-table-img {
+  max-width: 50px;
+  max-height: 50px;
+
+}
+
+
+.view-all {
+  padding: $padding-small 0;
+  border-top: 2px solid $border-color;
+  text-align: center;
+  font-size: 14px;
+  display: block;
+  color: $color-primary;
+  font-weight: $font-weight-bold;
+}
+
+.background-gradient {
+  background: linear-gradient(to bottom right, $color-primary, $color-secondary);
+}
+
+.card-wrapper {
+  position: relative;
+  width: 100%;
+  background: $white;
+  border-radius: $border-radius;
+  margin-bottom: 30px;
+  @include an-box-shadow-small;
+}
+
+
+.button-demo {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  button,
+  > div {
+    margin-bottom: 15px;
+  }
+}

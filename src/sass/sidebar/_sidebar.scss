@@ -1,0 +1,112 @@
+.sidebar-wrapper {
+
+}
+.readmin-sidebar {
+  position: relative;
+
+
+  .menudivider {
+    padding: $padding-base 0;
+  }
+
+  .menu-drawer {
+
+    > div {
+      padding-top: $padding-base * 5;
+    }
+
+    &.has-bg {
+      .nav-menu {
+        a, div, svg, i {
+          color: $font-color-white !important;
+          opacity: .97;
+        }
+        i {
+          opacity: .7;
+        }
+        .childmenu {
+          .active {
+            .childmenu & {
+              background: rgba($font-color-base, .3) !important;
+            }
+          }
+        }
+        .active {
+          background: rgba($font-color-base, .3) !important;
+        }
+        .menudivider hr {
+          background-color: $font-color-white !important;
+          opacity: .3;
+        }
+      }
+    }
+  }
+
+
+  .an-header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 256px;
+    z-index: 1400;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 0;
+
+    @extend .background-gradient;
+    @include transition();
+    &.menu-close {
+    }
+
+
+    @media (max-width: 520px) {
+      width: auto;
+    }
+
+    .header-left {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    .brand {
+      padding-left: $margin-medium;
+    }
+
+
+    button {
+      background-color: transparent !important;
+      text-align: left;
+      border: 0;
+      cursor: pointer;
+      margin-left: 0;
+      padding-left: 0;
+      position: relative;
+      left: -1px;
+      outline: 0;
+      img {
+        width: 30px;
+      }
+
+    }
+
+  }
+}
+
+
+.sidebar-initial-color {
+  background-color: #1b202a;
+
+  background: url('../../img/sidebar-bg.jpg') center center no-repeat;
+  background-size: cover;
+
+  .sidebar-overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(#1b202a, .8);
+  }
+}

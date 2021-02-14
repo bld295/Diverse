@@ -1,0 +1,22 @@
+.blog-single {
+  position: relative;
+  background: $color-bg-white;
+  @include an-box-shadow;
+  margin-bottom: $margin-large;
+  border-radius: $border-radius;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+  }
+
+  .details {
+    padding: $padding-medium;
+    p {
+      margin: 0;
+      opacity: .6;
+      color: $font-color-base
+    }
+  }
+
+}

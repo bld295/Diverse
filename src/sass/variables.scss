@@ -1,0 +1,65 @@
+// Color
+$white: #fff;
+$black: #000;
+$mat-black: #263238;
+$light-black: #38474f;
+$grey: #ddd;
+$border-color: #eaeff5;
+
+
+
+$color-primary: #f54a70;
+$color-primary-hover: darken($color-primary, 10%);
+$color-secondary: #cb55e3;
+$color-body-bg: #F5F5F6;
+$color-bg-white: #fff;
+
+$color-warning: #fdba2c;
+$color-danger: #e64043;
+
+$color-green: #1dc5e9;
+$color-green-light: #1dc9b6;
+$color-purple: #e884f9;
+
+
+// Font family
+$font-family-primary: 'Nunito', sans-serif;
+
+// Font color
+$font-color-base: #3C3459;
+$font-color-light: rgba($font-color-base, .6);
+$font-color-lighter: lighten($font-color-base, 45%);
+
+$font-color-white: $white;
+
+// Font weight
+$font-weight-light: 300;
+$font-weight-base: 400;
+$font-weight-medium: 600;
+$font-weight-bold: 700;
+
+$base-font-size : 14px;
+
+
+// Padding
+$padding-base: 15px;
+$padding-small: 10px;
+$padding-medium: 20px;
+$padding-large: 30px;
+$padding-5: 5px;
+
+//  Margin
+$margin-base: 15px;
+$margin-small: 10px;
+$margin-medium: 20px;
+$margin-large: 30px;
+
+
+// Some width and height
+$header-icon-width: 35px;
+$notification-width: 300px;
+$noti-icon-width: 30px;
+$circle-icon-width: 50px;
+
+// Border radius
+$border-radius: 6px;

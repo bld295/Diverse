@@ -1,0 +1,259 @@
+.notification-trigger {
+  position: relative;
+  margin-right: 5px;
+  padding-right: 10px;
+  &.has-unread {
+    &:before {
+      content: '';
+      position: absolute;
+      right: 5px;
+      top: 0px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: $color-primary;
+      @extend .background-gradient;
+    }
+  }
+}
+
+.notification-wrapper {
+  position: relative;
+
+  .inner-title {
+    padding: 15px 0;
+    text-align: center;
+    border-bottom: 2px solid $border-color;
+  }
+
+  button {
+    border: 0;
+    outline: 0;
+    margin-left: 5px;
+  }
+}
+
+.slide-content {
+  position: absolute;
+  top: 50px;
+  right: -20px;
+  width: $notification-width + 20;
+  background: $white;
+  overflow: visible;
+  border-radius: 4px;
+  transform: translateY(-20px);
+  visibility: hidden;
+  opacity: 0;
+
+
+
+  &.profile {
+    width: 230px;
+    right: -5px;
+
+    &:before {
+      right: 10px;
+    }
+
+    .profile-links {
+      position: relative;
+      padding: 15px 0;
+      a {
+        display: flex;
+        padding: 6px 15px;
+        color: $font-color-base;
+         i {
+           margin-right: 10px;
+           &.account {
+             color: $color-primary;
+           }
+           &.mail {
+             color: $color-secondary;
+           }
+           &.calendar {
+             color: $color-green;
+           }
+           &.setting {
+             color: $color-warning;
+           }
+
+           &.sign-out {
+             color: $color-danger;
+           }
+         }
+
+        &:hover {
+          color: $color-primary;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 420px) {
+    &:not(.profile) {
+      position: fixed;
+      top: 64px;
+      left: 0;
+      right: 0;
+      width: 100%;
+
+      &:before {
+        display: none;
+      }
+    }
+  }
+
+  //border-top: 2px solid $color-secondary;
+
+  @include an-box-shadow();
+  @include transition();
+
+  &:before {
+    content: '';
+    position: absolute;
+    right: 33px;
+    top: -10px;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid $white;
+  }
+
+  &.toggle {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0px);
+  }
+
+  h6 {
+    padding-bottom: $padding-medium;
+  }
+
+  .notifications {
+    position: relative;
+    overflow: scroll;
+    height: 350px;
+    padding: $padding-medium;
+    padding-bottom: 0;
+
+
+  }
+}
+
+.notification-single {
+  position: relative;
+  width: 100%;
+  padding-left: $padding-base * 3;
+  padding-bottom: $padding-small;
+
+  &.message {
+    &:before {
+      display: none;
+    }
+    .details {
+      padding-left: 10px;
+
+      .name {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      span {
+        line-height: 18px;
+        display: block;
+        padding-top: 4px;
+
+      }
+    }
+
+    .avatar {
+      width: $noti-icon-width + 10px;
+      height: $noti-icon-width + 10px;
+    }
+  }
+
+  /* &:before {
+   *   content: '';
+   *   position: absolute;
+   *   top: 0;
+   *   left: 14px;
+   *   width: 2px;
+   *   height: 100%;
+   *   border-right: 2px dashed $color-secondary;
+   * } */
+
+  &:last-child {
+    &:before {
+      display: none;
+    }
+  }
+
+  .avatar {
+    @include background-property;
+
+
+    width: $noti-icon-width;
+    height: $noti-icon-width;
+    position: absolute;
+    left: 0;
+    @include border-radius(50%);
+    //@include an-box-shadow();
+    //
+    &.unread {
+      &:before {
+        content: '';
+        position: absolute;
+        right: 0;
+        top: -2px;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: $color-secondary;
+        border: 2px solid $white;
+      }
+    }
+
+    &.avatar-icon {
+      background: rgba($color-primary, 1);
+      color: $white;
+      font-size: $base-font-size - 2;
+      @include flex-center();
+      @include an-box-shadow();
+    }
+    &.success {
+      background: rgba($color-secondary, 1);
+      color: $white;
+    }
+
+    &.warning {
+      background: rgba($color-warning, 1);
+      color: $white;
+    }
+
+    &.danger {
+      background: rgba($color-danger, 1);
+      color: $white;
+    }
+  }
+
+  .details {
+    color: $font-color-light;
+    font-size: $base-font-size;
+    margin-bottom: $margin-small - 5;
+
+    a {
+      color: $font-color-base;
+      padding-right: $padding-5;
+      font-weight: $font-weight-bold;
+      &:hover {
+        color: $color-primary;
+      }
+    }
+  }
+  .time {
+    font-size: $base-font-size - 2;
+    color: $font-color-lighter;
+    margin: 0;
+  }
+}

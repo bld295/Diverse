@@ -1,0 +1,32 @@
+.table {
+  thead {
+    th {
+      border-top: 0;
+      @media (max-width: 420px) {
+        font-size: 12px;
+        padding: 10px 5px;
+      }
+    }
+  }
+  tbody {
+    th {
+      @media (max-width: 420px) {
+        font-size: 12px;
+        padding: 10px 5px;
+      }
+    }
+  }
+}
+.product-table {
+  tbody {
+    tr td {
+      vertical-align: middle;
+    }
+  }
+}
+
+.panel-body {
+  td {
+    font-size: 15px !important;
+  }
+}
